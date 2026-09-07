@@ -17,5 +17,12 @@ Route::get('/login', function () {
 Route::post('/login', function (Request $request) {
     // Catatan: Nanti di sini kita pasang logika autentikasi database (Auth::attempt)
     // Untuk saat ini, langsung arahkan (redirect) ke Beranda
-    return redirect()->route('beranda');
+    return redirect()->route('dashboard');
 })->name('login.post');
+
+// Rute Dashboard
+Route::view('/dashboard', 'dashboard')->name('dashboard');
+
+// Rute Data Masyarakat (tanpa controller)
+Route::view('/data-masyarakat', 'DataMasyarakat')->name('data-masyarakat');
+
