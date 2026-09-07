@@ -210,20 +210,42 @@ body {
     width: 100%;
 }
 
-/* RESPONSIF MOBILE */
+/* RESPONSIF MOBILE (FULL CENTERED FIX) */
 @media (max-width: 768px) {
     .navbar, .hero-beranda, .stats-section, .steps-section, .footer {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .hero-beranda {
+    /* BAR ATAS (NAVBAR) */
+    .nav-container {
         flex-direction: column;
-        gap: 24px;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
-    .hero-text h1 {
-        font-size: 28px;
+    .nav-brand {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 16px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* HERO SECTION */
+    .hero-beranda {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-text h1, .hero-text p {
+        text-align: center;
     }
 
     .hero-image-placeholder {
@@ -231,7 +253,64 @@ body {
         min-height: 220px;
     }
 
-    .stats-section, .steps-grid {
+    /* KARTU STATISTIK (CARD VIEW CENTER) */
+    .stats-section {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 16px auto; /* Tepat di tengah horizontal */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* LANGKAH / CARA BERGABUNG (CARD VIEW CENTER) */
+    .steps-section {
+        text-align: center;
+    }
+
+    .steps-section h2 {
+        text-align: center;
+    }
+
+    .steps-grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .step-item {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 12px auto; /* Tepat di tengah horizontal */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* FOOTER (FULL CENTER) */
+    .footer {
+        width: 100%;
+        text-align: center !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer p {
+        width: 100%;
+        text-align: center !important;
+        margin: 0 auto;
     }
 }
