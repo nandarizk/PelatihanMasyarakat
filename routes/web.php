@@ -21,8 +21,7 @@ Route::post('/login', function (Request $request) {
 })->name('login.post');
 
 // Rute Dashboard
-Route::view('/dashboard', 'dashboard')->name('dashboard');
+Route::view('/dashboard', 'Admin-Dashboard.dashboard')->name('dashboard');
 
 // Rute Data Masyarakat (tanpa controller)
-Route::view('/data-masyarakat', 'DataMasyarakat')->name('data-masyarakat');
-
+Route::view('/data-masyarakat', 'Admin-DataMasyarakat.DataMasyarakat')->name('data-masyarakat');
